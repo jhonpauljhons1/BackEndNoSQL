@@ -7,10 +7,10 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["NoSQL","express","Backend","Software"],
+  "author": "jose antonio ramirez",
+  "license": "ISC,MIT",
+  "description": "backend de nosql publico",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
