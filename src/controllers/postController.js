@@ -1,4 +1,5 @@
-import post from '../models/posts.js';
+import Post from '../models/posts.js';
+import User from '../models/Users.js';
 
 // logica (1) recuperar ususarios de mongo con el modelo user
 
@@ -13,6 +14,7 @@ export const getAllPosts = async (req, res) => {
     }
 
 }
+
 export const createPost = async (req, res) => {
     const { title, description, userId } = req.body
 
