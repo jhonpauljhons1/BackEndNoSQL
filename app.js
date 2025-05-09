@@ -13,5 +13,6 @@ app.use(express.json());
 app.use(uri,healtCheckRoutes);
 app.use(`${uri}/users`,userRoutes);
 
+
 const PORT = port || 5000;
 app.listen(PORT, console.log(`Server running on http://localhost:${PORT}${uri}`));
