@@ -3,6 +3,7 @@ import connectDB from './src/config/db.js';
 import { port, uri } from './src/config/constants.js';
 import healtCheckRoutes from './src/routes/healtCheckRoutes.js';
 import userRoutes from './src/routes/userRoutes.js';
+import { generalErrorHandler, celebrateErrorHandler } from './src/middleware/errorMiddleware.js';
 
 connectDB();
 
@@ -12,6 +13,8 @@ app.use(express.json());
 
 app.use(uri,healtCheckRoutes);
 app.use(`${uri}/users`,userRoutes);
+app.use(celebrateErrorHandler);
+app.use(generalErrorHandler);
 
 
 const PORT = port || 5000;
