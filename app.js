@@ -13,6 +13,7 @@ app.use(express.json());
 
 app.use(uri,healtCheckRoutes);
 app.use(`${uri}/users`,userRoutes);
+app.use(`${uri}/auth`, authRoutes);
 app.use(celebrateErrorHandler);
 app.use(generalErrorHandler);
 
