@@ -41,6 +41,8 @@ export const authenticateUser = async (req, res) => {
     const {email, passsword} = req.body
     const user = await User.findOne({email})
 
+    console.log("USUARIO:"+user)
+
     console.log(`Contrtaseña: ${password}`)
     console.log(`Contraseña Cifrada guardada en DB::${user.password}`) 
 
