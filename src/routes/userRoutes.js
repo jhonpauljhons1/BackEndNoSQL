@@ -4,7 +4,9 @@ import {getAllPosts, createPost} from '../controllers/postController.js';
 
 const router = express.Router();
 
-router.route('/').get(getAllUsers).post(createUser);
-router.route('/posts').get(getAllPosts).post(createPost);
+//http://localhost:5001/api/v0/users
+router.route('/').get(protect, getAllUsers).post(createUser);
+//http://localhost:5001/api/v0/users/posts
+router.route('/posts').get(protect, getAllPosts).post(createPost);
 
 export default router;
